@@ -27,5 +27,19 @@ $ git diff readme.txt
 $ git add readme.txt
 $ git commit -m "版本说明"
 
+---查看版本之前提交的文档的记录---
+$ git log
+
+---版本回退：HEAD表示当前版本，HEAD^表示上个版本，HEAD^^表示上上个版本，HEAD~100表示前100个版本---
+$ git reset --hard HEAD^
+
+---查看当前回退的版本信息---
+$ cat readme.txt
+
+---如果要恢复到还原前的版本，hard后面跟commit id---
+$ git reset --hard 1094a
+
+---若无法找到回退前的版本号，通过命令查看版本号，查到后用上个命令进行恢复---
+$ git reflog
 
 
