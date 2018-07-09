@@ -17,4 +17,15 @@ $ git add readme.txt
 ---把文件提交到Git仓库中，引号中为本次版本说明---
 $ git commit -m "添加用户名和邮箱的方法"
 
+---Git status了解当前仓库的状态---
+$ git status
+
+---git diff命令查看当前版本和上个版本之间的差异---
+$ git diff readme.txt
+
+---版本修改后再提交仍然是2步---
+$ git add readme.txt
+$ git commit -m "版本说明"
+
+
 
