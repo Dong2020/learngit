@@ -3,21 +3,21 @@
 $ git config --global user.email "you@example.com"
 $ git config --global user.name "Your Name"
 
----创建Git仓库管理目录---
+---创建Git版本库管理目录---
 $ mkdir learngit
 $ cd learngit
 $ pwd
 
----把这个目录变为Git可管理的仓库---
+---把这个目录变为Git可管理的版本库---
 $ git init
 
 ---把文件添加到Git中，add后面为需要添加的文件，可多个、空格分隔---
 $ git add readme.txt
 
----把文件提交到Git仓库中，引号中为本次版本说明---
+---把文件提交到Git版本库中，引号中为本次版本说明---
 $ git commit -m "添加用户名和邮箱的方法"
 
----Git status了解当前仓库的状态---
+---Git status了解当前版本库的状态---
 $ git status
 
 ---git diff命令查看当前版本和上个版本之间的差异---
