@@ -42,4 +42,35 @@ $ git reset --hard 1094a
 ---若无法找到回退前的版本号，通过命令查看版本号，查到后用上个命令进行恢复---
 $ git reflog
 
+---查看文件状态---
+$ git status
+
+---管理修改：git管理的是修改，而不是文件，每次每个文件的修改记录---
+---git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别---
+$ git diff HEAD -- readme.txt
+
+---撤销修改：在没有add或commit之前，通过chekout 命令让文件回到最近一次Git commit或Git add---
+$ git checkout -- readme.txt
+
+---撤销后查看文件内容---
+$ cat readme.txt
+
+---将暂存区【Git add后】的修改撤销（UNstage）---
+$ Git reset HEAD readme.txt
+
+---从暂存区撤销修改后，再使用Git checkout命令丢弃工作区的修改【未Git add之前】
+$ git checkout -- readme.txt
+
+---删除文件：直接在文件管理器删除或使用rm命令删除---
+$ rm test.txt
+
+---从版本库中删除该文件，那就用命令git rm删掉，并且git commit，文件彻底删除，既删除工作区内容也删除暂存区内容---
+$ git rm test.txt
+$ git commit -m"remove test.txt"
+
+---删错了，撤回（没有Git rm之前）---
+$ git checkout -- test.txt
+
+
+
 
