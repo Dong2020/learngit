@@ -71,6 +71,14 @@ $ git commit -m"remove test.txt"
 ---删错了，撤回（没有Git rm之前）---
 $ git checkout -- test.txt
 
+---本地仓库与远程库连接---
+$ git remote add origin git@github.com:michaelliao/learngit.git
+
+---远程版本库，将本地库的所有内容推送到远程库上---
+$ git push -u origin master
+
+---后面再次提交，通过以下命令---
+$ git push origin master
 
 
 
